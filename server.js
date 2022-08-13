@@ -22,8 +22,8 @@ app.use(cors());
 
 
 
-const PORT = process.env.PORT || 3001
+const port = process.env.PORT || 3001
 
-app.listen(PORT, () => {
-    console.log(`APPlied on ${PORT}`)
+app.listen(port, () => {
+    console.log(`APPlied on ${port}`)
 })
