@@ -33,6 +33,9 @@ export default function NewJobForm() {
       <input name='offer' type='checkbox' />
       <p>Notes:</p>
       <input name='notes' type='text' />
+      <br />
+      <br />
+      <input type='submit' value='Upload New Application' />
     </>
   );
 }
