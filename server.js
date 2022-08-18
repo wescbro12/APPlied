@@ -16,6 +16,18 @@ app.use(express.json());
 app.use(cors());
 
 
+//Routes
+app.use('/api/jobs', require('./routes/api/jobs'))
+
+
+
+
+//Catch-All Route
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(_dirname, 'build', 'index.html'))
+});
+
+
 
 
 
@@ -25,5 +37,5 @@ app.use(cors());
 const port = process.env.PORT || 3001
 
 app.listen(port, () => {
-    console.log(`APPlied on ${port}`)
+    console.log(`APPlied Backend on ${port}`)
 })

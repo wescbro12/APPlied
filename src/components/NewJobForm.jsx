@@ -1,6 +1,44 @@
 import React from "react";
+import { useState, useRef } from "react";
+import { createJob } from "../utilities/job-api";
+import { useNavigate } from "react-router-dom";
 
 export default function NewJobForm() {
+  const company = useRef(null);
+  const jobTitle = useRef(null);
+  const contact = useRef(null);
+  const response = useRef(null);
+  const assesment = useRef(null);
+  const techInt = useRef(null);
+  const behInt = useRef(null);
+  const offer = useRef(null);
+  const salary = useRef(null);
+  const dateApplied = useRef(null);
+  const notes = useRef(null);
+  const Navigate = useNavigate();
+
+  const handleSubmit = async (evt) => {
+    evt.preventDefault();
+    try {
+      await createJob({
+        company: company.current.value,
+        jobTitle: jobTitle.current.value,
+        contact: contact.current.value,
+        response: response.current.value,
+        assesment: assesment.current.value,
+        techInt: techInt.current.value,
+        behInt: behInt.current.value,
+        offer: offer.current.value,
+        salary: salary.current.value,
+        dateApplied: dateApplied.current.value,
+        notes: notes.current.value,
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      Navigate("/jobs");
+    }
+  };
   return (
     <>
       <h2>Complete this form to start tracking your application</h2>
@@ -36,6 +74,10 @@ export default function NewJobForm() {
       <br />
       <br />
       <input type='submit' value='Upload New Application' />
+      <br />
+      <a href='/jobs'>
+        <h3>Return to Application Index</h3>
+      </a>
     </>
   );
 }
