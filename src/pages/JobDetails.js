@@ -3,13 +3,27 @@ import { useState, useEffect } from 'react';
 
 
 export default function Details() {
-    const [project, setProject] = useState({
-           jobTitle: '',
+    const [job, setJob] = useState({
+        jobTitle: '',
         contact: '',
+        response: '',
+        assesment: '',
+        techInt: '',
+        behInt: '',
+        offer: '',
+        salary: '',
+        dateApplied: '',
+        notes: ''
 
-})
+    })
+    
+    const [error, setError] = useState('')
+    
+    {/*const getOneJob = */ }
 
-    return (  );
+    return (<>
+        <h1>{job.jobTitle}</h1>
+    </>);
 }
 
 

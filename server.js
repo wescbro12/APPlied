@@ -10,7 +10,7 @@ require('./config/database.js')
 const app = express();
 
 
-//Middlewear
+//Middleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cors());
