@@ -1,7 +1,7 @@
 const User = require('../../models/Users');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const { restart } = require('nodemon');
+
 
 module.exports = {
     create,
@@ -45,6 +45,6 @@ function createJWT(user) {
         //the data payload
         { user },
         process.env.SECRET,
-        { espiresIn: '24h' }
+        { expiresIn: '24h' }
     )
 }
