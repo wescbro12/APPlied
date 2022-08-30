@@ -6,12 +6,13 @@ import React, { useState } from 'react';
 import { getUser } from './utilities/users-service';
 import LogInPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
+import Update from './pages/EditJob';
 
 function App() {
   const [user, setUser] = useState(getUser())
   return (
     <div className="App">
-      <SignUpPage />
+      <Update />
     </div>
   );
 }
