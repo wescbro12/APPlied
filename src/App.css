@@ -32,7 +32,16 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.full-screen-container {
+  /* background-image: url("../../../public/mountain-beautiful.jpg"); */
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
