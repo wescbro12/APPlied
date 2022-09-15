@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useRef } from "react";
-import { createJob } from "../utilities/job-api";
+import { createJob } from "../../utilities/job-api";
 // import { useNavigate } from "react-router-dom";
+import styles from "./NewJobForm.module.css"
 
 export default function NewJobForm() {
   const company = useRef(null);
@@ -66,11 +67,11 @@ export default function NewJobForm() {
         <h2>Complete this form to start tracking your application</h2>
         <p>Company Name:</p>
         <br />
-        <input name='company' type='text' ref={company} />
+        <input name='company' type='text' ref={company} placeholder="Company Name" />
         <p>Job Title:</p>
         <br />
-        <input name='jobTitle' type='text' ref={jobTitle} />
-        <p>Salary:</p> <input name='salary' type='number' ref={salary} />
+        <input name='jobTitle' type='text' ref={jobTitle} placeholder="Job Title" />
+        <p>Salary:</p> <input name='salary' type='number' ref={salary}  placeholder="Salary"/>
         <p>Contact Person/Recruiter:</p>
         <input name='contact' type='text' ref={contact} />
         <p>Date Applied:</p>
