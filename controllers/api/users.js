@@ -13,7 +13,7 @@ module.exports = {
 async function create(req, res) {
     try {
         const user = await User.create(req.body);
-        const token = createJWT(user); // token will be a string then send back the token as a string wich we need to account for in the client
+        const token = createJWT(user); // token will be a string then send back the token as a string which we need to account for in the client
         res.status(200).json(token)
 
     } catch (err) {

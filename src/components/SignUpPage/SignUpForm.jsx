@@ -11,7 +11,7 @@ export default class SignUpForm extends Component {
         confirm: '',
         error: ''
     } 
-    // const[formData, setFormData] = setState({})
+    
     
     handleChange = (evt) => {
         this.setState({...this.state, [evt.target.name]: evt.target.value, error:''})
@@ -26,7 +26,7 @@ export default class SignUpForm extends Component {
             const user = await signUp(formData);
             this.props.setUser(user)
         } catch (error) {
-            // this.setState({ error: 'Sign Up Failed' })
+            this.setState({ error: 'Sign Up Failed' })
             console.log({error: error.message})
         } finally {
             this.setState({

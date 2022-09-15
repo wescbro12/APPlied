@@ -5,6 +5,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+    --primary-light: rgba(208, 188, 237);
+    --primary-dark: rgba(93, 27, 186);
+    --primary: rgba(144, 82, 171);
+}
+
 body {
     margin: 0;
 }
@@ -21,7 +27,7 @@ body {
     align-items: center;
 }
 
-.signuptitle {
+.logintitle {
     margin: 0;
     color: white;
     text-align: center;
@@ -30,7 +36,7 @@ body {
 
 }
 
-.signupcon {
+.logincon {
     background-color: rgba(144, 82, 171, 0.7);
     box-shadow: 0 0 15px 0 rgba(93, 27, 186, 0.7);
     padding: 40px 30px;
@@ -73,7 +79,7 @@ body {
     box-shadow: 0 0 2px 1px rgba(93, 27, 186, 0.7);
 }
 
-.signupbtn {
+.loginbtn {
     padding: .2em 1 em;
     font-size: 1.5rem;
     font-weight: lighter;
@@ -85,7 +91,7 @@ body {
     cursor: pointer;
 }
 
-.signupbtn:hover,
-.signupbtn:focus {
+.loginbtn:hover,
+.loginbtn:focus {
     background-color: rgba(93, 27, 186, 0.4);
 }

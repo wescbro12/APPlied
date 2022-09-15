@@ -99,7 +99,7 @@ export default function NewJobForm() {
         <br />
       </form>
       <a href='/jobs'>
-        <h3>Return to Application Index</h3>
+        <h3>Return to Application Dashboard</h3>
       </a>
     </>
   );
