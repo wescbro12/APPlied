@@ -1,5 +1,8 @@
 
-import { useState, useEffect } from 'react';
+import * as jobsApi from "../utilities/job-api";
+import { useState, useEffect, useRef } from 'react';
+import { useParams } from 'react-router-dom';
+
 
 
 export default function Details() {
@@ -16,9 +19,9 @@ export default function Details() {
         notes: ''
 
     })
-    
+
     const [error, setError] = useState('')
-    
+
     {/*const getOneJob = */ }
 
     return (<>

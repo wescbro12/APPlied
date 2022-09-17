@@ -3,7 +3,7 @@ const router = express.Router();
 const job = require('../../controllers/api/jobs')
 
 //Jobs Index-will show cards of all the diff jobs
-router.get('index', job.index)
+router.get('/', job.index)
 
 // Delete route
 router.delete('/:id', job.destroy)
