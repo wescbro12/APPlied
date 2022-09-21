@@ -25,6 +25,7 @@ export default function Details() {
     {/*const getOneJob = */ }
 
     return (<>
+        <h1>This is the Job details page</h1>
         <h1>{job.jobTitle}</h1>
     </>);
 }

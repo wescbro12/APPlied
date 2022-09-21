@@ -72,6 +72,7 @@ export default function Update(props) {
     return (
 
         <>
+            <h1>Edit Job Details</h1>
             <form onSubmit={handleSubmit}>
                 <p>Job Title:</p>
                 <br />
